@@ -1,10 +1,14 @@
 import { useState } from "react";
+import { useNavigate, useParams } from "react-router";
+
+import fileSvg from "../assets/file.svg"
+
 import { Input } from "../components/Input";
 import { Select } from "../components/Select";
-import { CATEGORIES, CATEGORIES_KEYS } from "../utils/categories";
 import { Upload } from "../components/Upload";
 import { Button } from "../components/Button";
-import { useNavigate } from "react-router";
+
+import { CATEGORIES, CATEGORIES_KEYS } from "../utils/categories";
 
 export function Refund() {
   const [name, setName] = useState("");
@@ -14,9 +18,14 @@ export function Refund() {
   const [filename, setFilename] = useState<File | null>(null);
 
   const navigate = useNavigate();
+  const params = useParams<{ id: string }>();
 
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
+
+    if (params.id) {
+      return navigate(-1);
+    }
 
     navigate("/confirm", { state: { fromSubmit: true } });
   }
@@ -41,6 +50,7 @@ export function Refund() {
         legend="Nome da solicitação"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        disabled={!!params.id}
       />
       <div className="flex gap-3">
         <Select
@@ -48,6 +58,7 @@ export function Refund() {
           legend="Categoria"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
+          disabled={!!params.id}
         >
           {CATEGORIES_KEYS.map((category) => (
             <option key={category} value={category}>
@@ -61,15 +72,24 @@ export function Refund() {
           required
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
+          disabled={!!params.id}
         />
       </div>
 
-      <Upload
-        filename={filename && filename.name}
-        onChange={(e) => e.target.files && setFilename(e.target.files[0])}
-      />
+      {params.id ? (
+        <a href="https://www.google.com" target="_blank" className="text-sm text-green-100 font-semibold flex items-center justify-center gap-2 my-6 hover:opacity-70 transition ease-in">
+          <img src={fileSvg} alt="ícone arquivo" />
+          abrir comprovante
+        </a>
+      ) : (
+        <Upload
+          filename={filename && filename.name}
+          onChange={(e) => e.target.files && setFilename(e.target.files[0])}
+        />
+      )}
+
       <Button type="submit" isLoading={isLoading}>
-        Enviar
+        {params.id ? "Voltar" : "Enviar"}
       </Button>
     </form>
   );

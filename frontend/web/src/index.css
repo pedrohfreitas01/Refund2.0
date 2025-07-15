@@ -24,3 +24,17 @@ select {
     background-repeat: no-repeat;
     background-position: right 0.7rem top 50%;
 }
+
+
+::-webkit-scrollbar{
+    width: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #e4ece9;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
