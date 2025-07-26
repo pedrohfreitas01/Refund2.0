@@ -33,10 +33,9 @@ export function Dashboard() {
           amount: formatCurrency(refund.amount),
           categoryImg: CATEGORIES[refund.category].icon,
         }))
-      )
+      );
 
-      setTotalPage(response.data.pagination.totalPages)
-
+      setTotalPage(response.data.pagination.totalPages);
     } catch (error) {
       console.log(error);
 
@@ -49,8 +48,8 @@ export function Dashboard() {
   }
 
   function onSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    fetchRefunds()
+    e.preventDefault();
+    fetchRefunds();
   }
 
   function handlePagination(action: "next" | "previous") {
@@ -69,7 +68,7 @@ export function Dashboard() {
 
   useEffect(() => {
     fetchRefunds();
-  }, []);
+  }, [page]);
 
   return (
     <div className="bg-gray-500 rounded-xl p-10 md:min-w-[768px] ">
