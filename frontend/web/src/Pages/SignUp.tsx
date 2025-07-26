@@ -70,7 +70,7 @@ export function SignUp() {
     <form onSubmit={onSubmit} className="w-full flex flex-col gap-4">
       <Input
         required
-        legend="Name"
+        legend="Nome"
         placeholder="seu nome"
         onChange={(e) => setName(e.target.value)}
       />

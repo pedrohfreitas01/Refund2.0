@@ -21,6 +21,7 @@ const refundSchema = z.object({
   amount: z.coerce
     .number({ message: "Informe o valor válido" })
     .positive({ message: "Informe um valor válido e superior a 0" }),
+  category: z.string().min(1, { message: "Escolha uma categoria" }), 
 });
 
 export function Refund() {
@@ -106,6 +107,7 @@ export function Refund() {
       fetchRefund(params.id);
     }
   }, [params.id]);
+
 
   return (
     <form
