@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.refundsRoutes = void 0;
+const refunds_controller_1 = require("@/controllers/refunds-controller");
+const verify_user_autor_1 = require("@/middlewares/verify-user-autor");
+const express_1 = require("express");
+const refundsRoutes = (0, express_1.Router)();
+exports.refundsRoutes = refundsRoutes;
+const refundsController = new refunds_controller_1.RefundsController();
+refundsRoutes.post("/", (0, verify_user_autor_1.verifyUserAutor)(["employee"]), refundsController.create);
+refundsRoutes.get("/", (0, verify_user_autor_1.verifyUserAutor)(["manager"]), refundsController.index);
+refundsRoutes.get("/:id", (0, verify_user_autor_1.verifyUserAutor)(["employee", "manager"]), refundsController.show);
