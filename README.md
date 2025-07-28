@@ -16,6 +16,7 @@ Refund é uma aplicação fullstack desenvolvida para facilitar o controle e sol
 
 - **Employee:** pode cadastrar uma despesa preenchendo os campos `nome`, `valor`, `categoria` e fazer o upload da nota fiscal.
 - **Admin:** pode visualizar uma lista de todas as despesas cadastradas e acessar os detalhes de cada uma.
+    - email: mam@mam.com | senha: 123456
 
 ---
 
