@@ -1,6 +1,6 @@
-import uploadConfig from "@/config/upload";
-import { DiskStorage } from "@/providers/disk-storage";
-import { AppError } from "@/utils/AppErros";
+import uploadConfig from "../config/upload";
+import { DiskStorage } from "../providers/disk-storage";
+import { AppError } from "../utils/AppErros";
 import { Request, Response } from "express";
 import z, { ZodError } from "zod";
 

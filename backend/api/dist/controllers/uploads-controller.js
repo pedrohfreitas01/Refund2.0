@@ -37,9 +37,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UploadsController = void 0;
-const upload_1 = __importDefault(require("@/config/upload"));
-const disk_storage_1 = require("@/providers/disk-storage");
-const AppErros_1 = require("@/utils/AppErros");
+const upload_1 = __importDefault(require("../config/upload"));
+const disk_storage_1 = require("../providers/disk-storage");
+const AppErros_1 = require("../utils/AppErros");
 const zod_1 = __importStar(require("zod"));
 class UploadsController {
     async create(request, response) {

@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DiskStorage = void 0;
-const upload_1 = __importDefault(require("@/config/upload"));
+const upload_1 = __importDefault(require("../config/upload"));
 const node_fs_1 = __importDefault(require("node:fs"));
 const node_path_1 = __importDefault(require("node:path"));
 class DiskStorage {

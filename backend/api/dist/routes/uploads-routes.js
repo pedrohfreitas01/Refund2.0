@@ -4,10 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.uploadsRoutes = void 0;
-const uploads_controller_1 = require("@/controllers/uploads-controller");
-const verify_user_autor_1 = require("@/middlewares/verify-user-autor");
+const uploads_controller_1 = require("../controllers/uploads-controller");
+const verify_user_autor_1 = require("../middlewares/verify-user-autor");
 const express_1 = require("express");
-const upload_1 = __importDefault(require("@/config/upload"));
+const upload_1 = __importDefault(require("../config/upload"));
 const multer_1 = __importDefault(require("multer"));
 const uploadsRoutes = (0, express_1.Router)();
 exports.uploadsRoutes = uploadsRoutes;

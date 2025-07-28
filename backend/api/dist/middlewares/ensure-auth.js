@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ensureAuth = ensureAuth;
-const auth_1 = require("@/config/auth");
-const AppErros_1 = require("@/utils/AppErros");
+const auth_1 = require("../config/auth");
+const AppErros_1 = require("../utils/AppErros");
 const jsonwebtoken_1 = require("jsonwebtoken");
 function ensureAuth(request, response, next) {
     try {

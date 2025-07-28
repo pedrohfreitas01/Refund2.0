@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.refundsRoutes = void 0;
-const refunds_controller_1 = require("@/controllers/refunds-controller");
-const verify_user_autor_1 = require("@/middlewares/verify-user-autor");
+const refunds_controller_1 = require("../controllers/refunds-controller");
+const verify_user_autor_1 = require("../middlewares/verify-user-autor");
 const express_1 = require("express");
 const refundsRoutes = (0, express_1.Router)();
 exports.refundsRoutes = refundsRoutes;

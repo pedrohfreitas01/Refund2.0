@@ -2,7 +2,7 @@ import { Router } from "express";
 import { userRoutes } from "./user-routes";
 import { sessionsRoutes } from "./sessions-routes";
 import { refundsRoutes } from "./refunds-routes";
-import { ensureAuth } from "@/middlewares/ensure-auth";
+import { ensureAuth } from "../middlewares/ensure-auth";
 import { uploadsRoutes } from "./uploads-routes";
 
 const routes = Router();

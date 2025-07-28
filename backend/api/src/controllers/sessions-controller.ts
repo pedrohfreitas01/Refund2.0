@@ -1,6 +1,6 @@
-import { authConfig } from "@/config/auth";
-import { prisma } from "@/database/prisma";
-import { AppError } from "@/utils/AppErros";
+import { authConfig } from "../config/auth";
+import { prisma } from "../database/prisma";
+import { AppError } from "../utils/AppErros";
 import { compare } from "bcrypt";
 import { Request, Response } from "express";
 import { sign } from "jsonwebtoken";

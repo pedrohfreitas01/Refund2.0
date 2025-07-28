@@ -1,4 +1,4 @@
-import uploadConfig from "@/config/upload";
+import uploadConfig from "../config/upload";
 import fs from "node:fs";
 import path from "node:path";
 

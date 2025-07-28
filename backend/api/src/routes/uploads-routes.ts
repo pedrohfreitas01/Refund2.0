@@ -1,7 +1,7 @@
-import { UploadsController } from "@/controllers/uploads-controller";
-import { verifyUserAutor } from "@/middlewares/verify-user-autor";
+import { UploadsController } from "../controllers/uploads-controller";
+import { verifyUserAutor } from "../middlewares/verify-user-autor";
 import { Router } from "express";
-import uploadConfig from "@/config/upload";
+import uploadConfig from "../config/upload";
 import multer from "multer";
 
 const uploadsRoutes = Router();

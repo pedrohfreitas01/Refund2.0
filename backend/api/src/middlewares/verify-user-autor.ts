@@ -1,4 +1,4 @@
-import { AppError } from "@/utils/AppErros";
+import { AppError } from "../utils/AppErros";
 import { Request, Response, NextFunction } from "express";
 
 function verifyUserAutor(role: string[]) {

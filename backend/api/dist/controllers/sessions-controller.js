@@ -4,9 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SessionController = void 0;
-const auth_1 = require("@/config/auth");
-const prisma_1 = require("@/database/prisma");
-const AppErros_1 = require("@/utils/AppErros");
+const auth_1 = require("../config/auth");
+const prisma_1 = require("../database/prisma");
+const AppErros_1 = require("../utils/AppErros");
 const bcrypt_1 = require("bcrypt");
 const jsonwebtoken_1 = require("jsonwebtoken");
 const zod_1 = __importDefault(require("zod"));

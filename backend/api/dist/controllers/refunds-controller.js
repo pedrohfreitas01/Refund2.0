@@ -4,8 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RefundsController = void 0;
-const prisma_1 = require("@/database/prisma");
-const AppErros_1 = require("@/utils/AppErros");
+const prisma_1 = require("../database/prisma");
+const AppErros_1 = require("../utils/AppErros");
 const zod_1 = __importDefault(require("zod"));
 const CategoriesEnum = zod_1.default.enum([
     "food",

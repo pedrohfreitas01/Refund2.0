@@ -1,5 +1,5 @@
-import { prisma } from "@/database/prisma";
-import { AppError } from "@/utils/AppErros";
+import { prisma } from "../database/prisma";
+import { AppError } from "../utils/AppErros";
 import { UserRole } from "@prisma/client";
 import { hash } from "bcrypt";
 import { Request, Response } from "express";

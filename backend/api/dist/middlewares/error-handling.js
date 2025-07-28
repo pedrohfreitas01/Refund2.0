@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.errorHandling = void 0;
-const AppErros_1 = require("@/utils/AppErros");
+const AppErros_1 = require("../utils/AppErros");
 const zod_1 = require("zod");
 const errorHandling = (error, request, response, next) => {
     if (error instanceof AppErros_1.AppError) {
